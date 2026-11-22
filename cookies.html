@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de cookies — Cuatro Duros</title>
+<meta name="description" content="Política de cookies de Cuatro Duros.">
+<link rel="canonical" href="https://cuatroduros.es/cookies">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F5EE">
+<meta property="og:title" content="Política de cookies — Cuatro Duros">
+<meta property="og:description" content="Política de cookies de Cuatro Duros.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cuatroduros.es/cookies">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=bricolage-grotesque:600,700,800|inter:400,500,600,700&amp;display=swap">
+<link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="logo logo-solo" href="/" aria-label="Cuatro Duros, inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="17" fill="#B8891A"/><circle cx="20" cy="19" r="17" fill="#E5B83B"/><circle cx="20" cy="19" r="12.5" fill="none" stroke="#B8891A" stroke-width="1.6" stroke-dasharray="2 2.4"/><text x="20" y="25.6" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="18" fill="#121417">4</text></svg></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="/guias/#ahorrar">Ahorrar</a>
+      <a href="/guias/#invertir">Invertir</a>
+      <a href="/guias/#bancos">Bancos</a>
+      <a href="/guias/#primer-sueldo">Primer sueldo</a>
+      <a href="/comparativas/cuentas-estudiantes">Comparativas</a>
+      <a href="/herramientas/calculadora-interes-compuesto">Calculadora</a>
+    </nav>
+    <a class="boton boton-negro boton-peq" href="/#newsletter">Newsletter gratis</a>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="texto">
+  <h1>Política de cookies</h1>
+  <p>Ahora mismo esta web no instala cookies propias de análisis, publicidad ni seguimiento.</p>
+  <p>Si pulsas un enlace a otra web, esa web puede usar sus propias cookies, que se rigen por su política. Si en el futuro esta web añade herramientas de análisis o publicidad, esta página se actualizará y se pedirá tu consentimiento cuando sea necesario.</p>
+  <p>Puedes borrar o bloquear las cookies desde la configuración de tu navegador.</p>
+</div>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div>
+      <a class="logo" href="/" aria-label="Cuatro Duros, inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="17" fill="#B8891A"/><circle cx="20" cy="19" r="17" fill="#E5B83B"/><circle cx="20" cy="19" r="12.5" fill="none" stroke="#B8891A" stroke-width="1.6" stroke-dasharray="2 2.4"/><text x="20" y="25.6" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="18" fill="#121417">4</text></svg><span class="logo-nombre">Cuatro Duros</span></a>
+      <p>Finanzas personales para gente joven. Web divulgativa: nada de lo que publico es asesoramiento financiero personalizado. Si algún día incluyo enlaces de afiliado, lo indicaré siempre.</p>
+    </div>
+    <div>
+      <h3>Temas</h3>
+      <ul>
+        <li><a href="/guias/#primer-sueldo">Primer sueldo</a></li>
+        <li><a href="/guias/#bancos">Cuentas y bancos</a></li>
+        <li><a href="/guias/#invertir">Empezar a invertir</a></li>
+        <li><a href="/guias/#ahorrar">Ahorro</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>La web</h3>
+      <ul>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/comparativas/cuentas-estudiantes">Comparativa de cuentas</a></li>
+        <li><a href="/herramientas/calculadora-interes-compuesto">Calculadora de interés compuesto</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="/aviso-legal">Aviso legal</a></li>
+        <li><a href="/privacidad">Privacidad</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pie-legal"><div class="contenedor"><span>© 2026 Cuatro Duros</span><span>Hecho con poca pasta y muchas ganas.</span></div></div>
+</footer><script>
+(function(){
+  var h=document.querySelector('.cabecera'); if(!h) return;
+  var y=window.scrollY, pend=false;
+  window.addEventListener('scroll',function(){
+    if(pend) return; pend=true;
+    requestAnimationFrame(function(){
+      var n=window.scrollY;
+      if(n>y+6 && n>140){ h.classList.add('oculta'); }
+      else if(n<y-6 || n<=140){ h.classList.remove('oculta'); }
+      y=n; pend=false;
+    });
+  },{passive:true});
+  h.addEventListener('focusin',function(){ h.classList.remove('oculta'); });
+})();
+</script>
+</body>
+</html>

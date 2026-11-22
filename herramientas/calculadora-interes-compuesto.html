@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de interés compuesto gratis — Cuatro Duros</title>
+<meta name="description" content="Calcula cuánto puede crecer tu dinero invirtiendo cada mes: aportación inicial, mensual, rentabilidad y años. Gratis y sin registro.">
+<link rel="canonical" href="https://cuatroduros.es/herramientas/calculadora-interes-compuesto">
+<meta name="theme-color" content="#F7F5EE">
+<meta property="og:title" content="Calculadora de interés compuesto gratis — Cuatro Duros">
+<meta property="og:description" content="Calcula cuánto puede crecer tu dinero invirtiendo cada mes: aportación inicial, mensual, rentabilidad y años. Gratis y sin registro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cuatroduros.es/herramientas/calculadora-interes-compuesto">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=bricolage-grotesque:600,700,800|inter:400,500,600,700&amp;display=swap">
+<link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="logo logo-solo" href="/" aria-label="Cuatro Duros, inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="17" fill="#B8891A"/><circle cx="20" cy="19" r="17" fill="#E5B83B"/><circle cx="20" cy="19" r="12.5" fill="none" stroke="#B8891A" stroke-width="1.6" stroke-dasharray="2 2.4"/><text x="20" y="25.6" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="18" fill="#121417">4</text></svg></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="/guias/#ahorrar">Ahorrar</a>
+      <a href="/guias/#invertir">Invertir</a>
+      <a href="/guias/#bancos">Bancos</a>
+      <a href="/guias/#primer-sueldo">Primer sueldo</a>
+      <a href="/comparativas/cuentas-estudiantes">Comparativas</a>
+      <a href="/herramientas/calculadora-interes-compuesto">Calculadora</a>
+    </nav>
+    <a class="boton boton-negro boton-peq" href="/#newsletter">Newsletter gratis</a>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="cab-pagina"><div class="contenedor">
+  <span class="etiqueta"><i aria-hidden="true"></i>Herramienta gratuita</span>
+  <h1>Calculadora de interés compuesto</h1>
+  <p>Mira cuánto podría crecer tu dinero si inviertes una cantidad cada mes durante años. Cambia los números y compáralo al momento.</p>
+</div></div>
+
+<div class="contenedor calc-wrap">
+  <form class="tarjeta calc-form" id="calc" onsubmit="return false">
+    <div class="campo">
+      <label for="c-inicial">Aportación inicial</label>
+      <div class="input-ud"><input id="c-inicial" type="number" inputmode="decimal" min="0" step="50" value="0"><span>€</span></div>
+    </div>
+    <div class="campo">
+      <label for="c-mensual">Aportación mensual</label>
+      <div class="input-ud"><input id="c-mensual" type="number" inputmode="decimal" min="0" step="10" value="50"><span>€</span></div>
+    </div>
+    <div class="campo">
+      <label for="c-rent">Rentabilidad anual estimada</label>
+      <div class="input-ud"><input id="c-rent" type="number" inputmode="decimal" min="-20" max="20" step="0.5" value="5"><span>%</span></div>
+    </div>
+    <div class="campo">
+      <label for="c-anios">Años</label>
+      <div class="input-ud"><input id="c-anios" type="number" inputmode="numeric" min="1" max="60" step="1" value="30"><span>años</span></div>
+    </div>
+  </form>
+
+  <div class="calc-res">
+    <div class="calc-kpis" role="status" aria-live="polite">
+      <div class="kpi kpi-final"><span>Valor final aproximado</span><strong id="r-final">—</strong></div>
+      <div class="kpi"><span>Total aportado</span><strong id="r-aportado">—</strong></div>
+      <div class="kpi"><span>Ganado con intereses</span><strong id="r-intereses">—</strong></div>
+    </div>
+    <div class="tarjeta calc-graf">
+      <div class="graf-leyenda"><span><i style="background:var(--verde-claro);border:1px solid var(--verde)"></i>Lo que aportas</span><span><i style="background:var(--verde)"></i>Intereses</span></div>
+      <div class="graf" id="graf" aria-hidden="true"></div>
+      <p class="graf-pie" id="graf-pie"></p>
+    </div>
+  </div>
+</div>
+
+<div class="texto" style="padding-top:8px">
+  <div class="caja caja-aviso">Es un cálculo hipotético con una rentabilidad constante y capitalización mensual, antes de impuestos, comisiones e inflación. La bolsa no sube cada año lo mismo, puede tener años muy negativos y nadie puede garantizar ninguna rentabilidad. Úsala para entender el efecto del tiempo, no como una previsión.</div>
+
+  <h2>Qué es el interés compuesto</h2>
+  <p>Es lo que pasa cuando lo que ganas se reinvierte y empieza a generar rentabilidad por sí mismo. El primer año ganas sobre lo que aportaste; el segundo, sobre lo que aportaste más lo que ganaste el primero; y así sucesivamente. Con los años, la parte de «intereses» del gráfico crece cada vez más deprisa.</p>
+  <h2>Cómo usar la calculadora</h2>
+  <ul>
+    <li><strong>Aportación inicial:</strong> lo que inviertes de golpe al empezar. Puede ser 0.</li>
+    <li><strong>Aportación mensual:</strong> lo que sumas cada mes.</li>
+    <li><strong>Rentabilidad anual estimada:</strong> una hipótesis. Prueba con varias (por ejemplo 3 %, 5 % y 7 %) para ver un rango, en vez de fiarte de una sola cifra.</li>
+    <li><strong>Años:</strong> cuánto tiempo mantienes la inversión.</li>
+  </ul>
+  <h2>Lo que enseña</h2>
+  <p>Juega con los años: verás que empezar antes suele pesar más que aportar más. Lo explico con ejemplos en <a href="/guias/cuanto-dinero-empezar-invertir">cuánto dinero necesitas para empezar a invertir</a>, y si quieres saber dónde invertir con poco, en <a href="/guias/invertir-indice-mundial-poco-dinero">cómo invertir en un índice mundial con poco dinero</a>.</p>
+</div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var ids=['c-inicial','c-mensual','c-rent','c-anios'];
+  var fmt=new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+  function num(id,def){var v=parseFloat(($(id).value||'').replace(',','.'));return isFinite(v)?v:def;}
+  function calc(){
+    var ini=Math.max(0,num('c-inicial',0)), men=Math.max(0,num('c-mensual',0));
+    var rent=Math.min(20,Math.max(-20,num('c-rent',0)))/100, anios=Math.round(Math.min(60,Math.max(1,num('c-anios',1))));
+    var r=rent/12, saldo=ini, aport=ini, filas=[];
+    for(var m=1;m<=anios*12;m++){ saldo=saldo*(1+r)+men; aport+=men; if(m%12===0) filas.push([m/12,aport,saldo]); }
+    $('r-final').textContent=fmt.format(saldo);
+    $('r-aportado').textContent=fmt.format(aport);
+    $('r-intereses').textContent=fmt.format(saldo-aport);
+    var max=0; filas.forEach(function(f){max=Math.max(max,f[2],f[1]);});
+    var paso=Math.max(1,Math.ceil(filas.length/30)), html='';
+    filas.forEach(function(f,i){
+      if((i+1)%paso!==0 && i!==filas.length-1) return;
+      var hA=max?Math.max(0,Math.min(f[1],f[2]))/max*100:0, hI=max?Math.max(0,f[2]-f[1])/max*100:0;
+      html+='<div class="barra-col" title="Año '+f[0]+': '+fmt.format(f[2])+'"><div class="b-int" style="height:'+hI+'%"></div><div class="b-ap" style="height:'+hA+'%"></div><span>'+f[0]+'</span></div>';
+    });
+    $('graf').innerHTML=html;
+    $('graf-pie').textContent='Valor año a año, de 1 a '+anios+'. Lo aportado es '+fmt.format(aport)+' y los intereses, '+fmt.format(saldo-aport)+'.';
+  }
+  ids.forEach(function(id){$(id).addEventListener('input',calc);});
+  calc();
+})();
+</script>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div>
+      <a class="logo" href="/" aria-label="Cuatro Duros, inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="17" fill="#B8891A"/><circle cx="20" cy="19" r="17" fill="#E5B83B"/><circle cx="20" cy="19" r="12.5" fill="none" stroke="#B8891A" stroke-width="1.6" stroke-dasharray="2 2.4"/><text x="20" y="25.6" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="18" fill="#121417">4</text></svg><span class="logo-nombre">Cuatro Duros</span></a>
+      <p>Finanzas personales para gente joven. Web divulgativa: nada de lo que publico es asesoramiento financiero personalizado. Si algún día incluyo enlaces de afiliado, lo indicaré siempre.</p>
+    </div>
+    <div>
+      <h3>Temas</h3>
+      <ul>
+        <li><a href="/guias/#primer-sueldo">Primer sueldo</a></li>
+        <li><a href="/guias/#bancos">Cuentas y bancos</a></li>
+        <li><a href="/guias/#invertir">Empezar a invertir</a></li>
+        <li><a href="/guias/#ahorrar">Ahorro</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>La web</h3>
+      <ul>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/comparativas/cuentas-estudiantes">Comparativa de cuentas</a></li>
+        <li><a href="/herramientas/calculadora-interes-compuesto">Calculadora de interés compuesto</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="/aviso-legal">Aviso legal</a></li>
+        <li><a href="/privacidad">Privacidad</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pie-legal"><div class="contenedor"><span>© 2026 Cuatro Duros</span><span>Hecho con poca pasta y muchas ganas.</span></div></div>
+</footer><script>
+(function(){
+  var h=document.querySelector('.cabecera'); if(!h) return;
+  var y=window.scrollY, pend=false;
+  window.addEventListener('scroll',function(){
+    if(pend) return; pend=true;
+    requestAnimationFrame(function(){
+      var n=window.scrollY;
+      if(n>y+6 && n>140){ h.classList.add('oculta'); }
+      else if(n<y-6 || n<=140){ h.classList.remove('oculta'); }
+      y=n; pend=false;
+    });
+  },{passive:true});
+  h.addEventListener('focusin',function(){ h.classList.remove('oculta'); });
+})();
+</script>
+</body>
+</html>
