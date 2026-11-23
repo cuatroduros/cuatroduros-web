@@ -368,3 +368,10 @@ a.post:hover{transform:translateY(-4px);box-shadow:var(--sombra);color:var(--tin
 .resumen-30 strong{display:flex;align-items:center;gap:8px;font-family:var(--titulos);font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:#7A5A06;margin-bottom:6px}
 .resumen-30 strong::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--oro);box-shadow:inset 0 -2px 0 var(--oro-osc)}
 .articulo .resumen-30 p{margin:0;font-size:17px;line-height:1.6;color:var(--tinta)}
+
+/* redes en el pie y página de vídeos */
+.pie .redes{margin-top:14px;font-weight:700}
+.pie .redes a{text-decoration:none}
+.lista-videos{list-style:none;padding:0;margin:8px 0 28px}
+.lista-videos li{padding:16px 18px;margin:0 0 12px;border-radius:16px;background:var(--crema,#F7F2E7);line-height:1.45}
+.lista-videos li a{font-weight:700}
